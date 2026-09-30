@@ -5,8 +5,9 @@ namespace Tyuiu.AshirovaDA.Sprint1.Task4.V13.Lib
     {
         public double Calculate(double x, double y)
         {
-            var res = 1 / (Math.Pow(x, 2) + Math.Pow(y, 2));
-            return res;
+            double numerator = Math.Cos(Math.PI / x);
+            double denominator = 3 * Math.Exp(x + y);
+            return Math.Round(numerator / denominator, 3, MidpointRounding.AwayFromZero);
         }
     }
 }
